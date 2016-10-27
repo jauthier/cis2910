@@ -17,9 +17,7 @@ int main(int argc, char * argv[]){
         exit(0);
     }
     numFilps = strtol(argv[1], &temp, 10);
-    seed = strtol(argv[2], &temp, 10);            //
-
-    
+    seed = strtol(argv[2], &temp, 10);            
 
     for(i=0;i<10;i++){
         printf("%d\n", seed);
@@ -36,7 +34,7 @@ int main(int argc, char * argv[]){
         startStreakAv = startStreakAv + length;
         seed++;
     }
-    printf("%d\n", startStreakAv);
+    printf("Longest starting streak average: %f\n", startStreakAv/10);
     return 0;
 }
 
@@ -45,10 +43,7 @@ char flip(int seed){
     srand(seed);
 
     double ranNum = (rand()%100);
-    //printf("%f\n",ranNum);
     ranNum = ranNum/100;
-    //printf("%f\n",ranNum);
-
 
     if (ranNum < 0.5)
         outcome = 'T';
@@ -70,4 +65,24 @@ int longestStreakFromStart(int size, char*allOutcomes){
     }
 
     return length;
+}
+
+int longestStreak(int size, char*allOutcomes){
+    int longest, hold, i;
+    char compare = allOutcomes[0];
+    hold = 1;
+    longest = 1;
+
+    for (i=1;1<size;i++){
+        if (allOutcomes[i] == compare){
+            hold ++;
+        } else {
+            compare = allOutcomes[i];
+            if (hold > longest)
+                longest = hold;
+            hold = 1;
+        }
+    }
+
+    return longest;
 }
