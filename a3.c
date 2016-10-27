@@ -25,10 +25,10 @@ int main(int argc, char * argv[]){
         printf("%d\n", seed);
         char allOutcomes[numFilps];
         int j = 0;
-        for (j=0;i<numFilps;i++){
+        for (j=0;j<numFilps;j++){
             char out = flip(seed+i);
             printf("%c ", out);
-            allOutcomes[i] = out;
+            allOutcomes[j] = out;
         }
         int length = longestStreakFromStart(numFilps, allOutcomes);
         printf("%d\n", length);
