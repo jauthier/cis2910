@@ -8,7 +8,7 @@ int longestStreakFromStart(int size, char*allOutcomes);
 int main(int argc, char * argv[]){
 
     //take in the number of flips
-    int numFilps, i, seed;
+    int numFilps, i, seed, startStreakAv, longestStreakAv;
     char * temp;
 
 
@@ -19,15 +19,22 @@ int main(int argc, char * argv[]){
     numFilps = strtol(argv[1], &temp, 10);
     seed = strtol(argv[2], &temp, 10);
 
-    char allOutcomes[numFilps];
+    
 
-    for (i=0;i<numFilps;i++){
-        char out = flip(seed+i);
-        printf("%c ", out);
-        allOutcomes[i] = out;
+    for(i=0;i<1000;i++){
+        char allOutcomes[numFilps];
+        int j = 0;
+        for (j=0;i<numFilps;i++){
+            char out = flip(seed+i);
+            //printf("%c ", out);
+            allOutcomes[i] = out;
+        }
+        int length = longestStreakFromStart(numFilps, allOutcomes);
+        printf("%d\n", length);
+        
+        startStreakAv = startStreakAv + length;
+        seed++;
     }
-    int length = longestStreakFromStart(numFilps, allOutcomes);
-    printf("%d\n", length);
     return 0;
 }
 
