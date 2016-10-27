@@ -7,17 +7,18 @@ char flip();
 int main(int argc, char * argv[]){
 
     //take in the number of flips
-    int numFilps, i;
+    int numFilps, i, seed;
     char * temp;
 
-    if (argc == 1){
+    if (argc != 3){
         printf("You must enter the number of flips you wish to simulate.\n");
         exit(0);
     }
     numFilps = strtol(argv[1], &temp, 10);
+    seed = strtol(argv[2], &temp, 10);
 
     for (i=0;i<numFilps;i++){
-        char out = flip(1024+i);
+        char out = flip(seed+i);
         printf("%c\n", out);
     }
 
