@@ -17,7 +17,7 @@ int main(int argc, char * argv[]){
         exit(0);
     }
     numFilps = strtol(argv[1], &temp, 10);
-    seed = strtol(argv[2], &temp, 10);
+    seed = strtol(argv[2], &temp, 10);            //
 
     
 
@@ -27,7 +27,7 @@ int main(int argc, char * argv[]){
         int j = 0;
         for (j=0;i<numFilps;i++){
             char out = flip(seed+i);
-            //printf("%c ", out);
+            printf("%c ", out);
             allOutcomes[i] = out;
         }
         int length = longestStreakFromStart(numFilps, allOutcomes);
