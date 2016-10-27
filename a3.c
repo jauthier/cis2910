@@ -75,9 +75,10 @@ int longestStreak(int size, char*allOutcomes){
     char compare = allOutcomes[0];
     hold = 1;
     longest = 1;
-    printf("here1\n");
+    printf("here1, %d\n",size);
     for (i=1;1<size;i++){
         printf("here2\n");
+        char c = getchar();
         if (allOutcomes[i] == compare){
             hold ++;
         } else {
