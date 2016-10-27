@@ -20,7 +20,7 @@ int main(int argc, char * argv[]){
     numFilps = strtol(argv[1], &temp, 10);
     seed = strtol(argv[2], &temp, 10);            
 
-    for(i=0;i<10;i++){
+    for(i=0;i<1000;i++){
         printf("%d\n", seed);
         char allOutcomes[numFilps];
         int j = 0;
@@ -30,13 +30,15 @@ int main(int argc, char * argv[]){
             allOutcomes[j] = out;
         }
         int length = longestStreakFromStart(numFilps, allOutcomes);
-        printf("%d\n", length);
         int longest = longestStreak(numFilps, allOutcomes);
 
+        longestStreakAv = longestStreakAv + longest;
         startStreakAv = startStreakAv + length;
         seed++;
     }
-    startStreakAv = startStreakAv/10;
+    startStreakAv = startStreakAv/1000;
+    longestStreakAv = longestStreakAv/1000;
+    printf("Longest streak average: %f\n", longestStreakAv);
     printf("Longest starting streak average: %f\n", startStreakAv);
     return 0;
 }
@@ -76,7 +78,6 @@ int longestStreak(int size, char*allOutcomes){
     hold = 1;
     longest = 1;
     for (i=1;i<size;i++){
-        //printf("char:%c, compare: %c, i: %d, hold: %d, longest: %d\n",allOutcomes[i], compare,i,hold, longest);
         if (allOutcomes[i] == compare){
             hold ++;
             if (hold > longest)
@@ -88,6 +89,5 @@ int longestStreak(int size, char*allOutcomes){
             hold = 1;
         }
     }
-printf("%d\n", longest);
     return longest;
 }
