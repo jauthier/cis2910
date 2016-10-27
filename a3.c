@@ -34,7 +34,8 @@ int main(int argc, char * argv[]){
         startStreakAv = startStreakAv + length;
         seed++;
     }
-    printf("Longest starting streak average: %f\n", startStreakAv/10);
+    startStreakAv = startStreakAv/10;
+    printf("Longest starting streak average: %f\n", startStreakAv);
     return 0;
 }
 
