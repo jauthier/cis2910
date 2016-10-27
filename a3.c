@@ -27,10 +27,15 @@ int main(int argc, char * argv[]){
 
 char flip(){
     char outcome;
+    time_t t;
+    srand(time(&t));
+
     double ranNum = (rand()%100);
     printf("%f\n",ranNum);
     ranNum = ranNum/100;
     printf("%f\n",ranNum);
+
+
     if (ranNum < 0.5)
         outcome = 'T';
     else 
