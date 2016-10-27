@@ -21,7 +21,8 @@ int main(int argc, char * argv[]){
 
     
 
-    for(i=0;i<1000;i++){
+    for(i=0;i<10;i++){
+        printf("%d\n", seed);
         char allOutcomes[numFilps];
         int j = 0;
         for (j=0;i<numFilps;i++){
@@ -31,7 +32,7 @@ int main(int argc, char * argv[]){
         }
         int length = longestStreakFromStart(numFilps, allOutcomes);
         printf("%d\n", length);
-        
+
         startStreakAv = startStreakAv + length;
         seed++;
     }
