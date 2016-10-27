@@ -36,6 +36,7 @@ int main(int argc, char * argv[]){
         startStreakAv = startStreakAv + length;
         seed++;
     }
+    printf("%d\n", startStreakAv);
     return 0;
 }
 
