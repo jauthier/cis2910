@@ -17,7 +17,7 @@ int main(int argc, char * argv[]){
     numFilps = strtol(argv[1], &temp, 10);
 
     for (i=0;i<numFilps;i++){
-        char out = flip();
+        char out = flip(1024+i);
         printf("%c\n", out);
     }
 
@@ -25,10 +25,9 @@ int main(int argc, char * argv[]){
     return 0;
 }
 
-char flip(){
+char flip(int seed){
     char outcome;
-    time_t t;
-    srand(time(&t));
+    srand(seed);
 
     double ranNum = (rand()%100);
     printf("%f\n",ranNum);
