@@ -29,6 +29,8 @@ char flip(){
     char outcome;
     double ranNum = (rand()%100);
     printf("%f\n",ranNum);
+    ranNum = ranNum/100;
+    printf("%f\n",ranNum);
     if (ranNum < 0.5)
         outcome = 'T';
     else 
