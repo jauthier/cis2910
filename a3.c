@@ -26,7 +26,7 @@ int main(int argc, char * argv[]){
         char allOutcomes[numFilps];
         int j = 0;
         for (j=0;j<numFilps;j++){
-            char out = flip(seed+i);
+            char out = flip(seed+j);
             printf("%c ", out);
             allOutcomes[j] = out;
         }
