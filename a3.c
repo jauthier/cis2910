@@ -27,7 +27,8 @@ int main(int argc, char * argv[]){
 
 char flip(){
     char outcome;
-    double ranNum = (rand()%100)/100;
+    double ranNum = (rand()%100);
+    printf("%f\n",ranNum);
     if (ranNum < 0.5)
         outcome = 'T';
     else 
