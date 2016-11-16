@@ -38,9 +38,9 @@ int main(int argc, char *argv[]){
 			}
 		}
 		//print the results of the first graph
-		prinf("Degree Sequence for G1: ");
+		printf("Degree Sequence for G1: ");
 		for (i=0;i<vertices;i++){
-			prinf(" %d",g1[i]);
+			printf(" %d",g1[i]);
 		}
 		//get the next character
 		c = fgetc(fp);
@@ -61,9 +61,9 @@ int main(int argc, char *argv[]){
 		}
 
 		//print the results of the second graph
-		prinf("Degree Sequence for G2: ");
+		printf("Degree Sequence for G2: ");
 		for (i=0;i<vertices;i++){
-			prinf(" %d",g2[i]);
+			printf(" %d",g2[i]);
 		}
 		//get the next character
 		c = fgetc(fp);
