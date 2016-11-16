@@ -20,8 +20,9 @@ int main(int argc, char *argv[]){
 
 	//open file
 	FILE * fp;
-	fp = fopen(fileName, "r");
 printf("here\n");
+	fp = fopen(fileName, "r");
+
 	if (fp == NULL){
 		printf("file not found\n");
 		exit(0);
