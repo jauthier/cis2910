@@ -6,7 +6,7 @@
 
 int main(int argc, char *argv[]){
 
-	char fileName[100];
+	char *fileName;
 	if (argc == 2)
 		fileName = argv[0];
 	else
@@ -24,12 +24,12 @@ int main(int argc, char *argv[]){
 	while(c != EOF){
 		
 		//graph 1
-		vertices = strtol(c,&temp,10);
+		vertices = (int)c;
 		int i = 0;
-		for (i=0;i<verticies;i++){
+		for (i=0;i<vertices;i++){
 			
-			char row[verticies*2];
-			fgets(row,verticies*2,fp);
+			char row[vertices*2];
+			fgets(row,vertices*2,fp);
 
 			char *token = strtok(row," ");
 			while(token != NULL){
@@ -39,19 +39,19 @@ int main(int argc, char *argv[]){
 		}
 		//print the results of the first graph
 		prinf("Degree Sequence for G1: ");
-		for (i=0;i<verticies;i++){
+		for (i=0;i<vertices;i++){
 			prinf(" %d",g1[i]);
 		}
 		//get the next character
 		c = fgetc(fp);
-		vertices = strtol(c,&temp,10);
+		vertices = (int)c;
 
 		//graph 2
 		i = 0;
 		for (i=0;i<verticies;i++){
 			
-			char row[verticies*2];
-			fgets(row,verticies*2,fp);
+			char row[vertices*2];
+			fgets(row,vertices*2,fp);
 
 			char *token = strtok(row," ");
 			while(token != NULL){
@@ -62,7 +62,7 @@ int main(int argc, char *argv[]){
 
 		//print the results of the second graph
 		prinf("Degree Sequence for G2: ");
-		for (i=0;i<verticies;i++){
+		for (i=0;i<vertices;i++){
 			prinf(" %d",g2[i]);
 		}
 		//get the next character
