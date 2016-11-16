@@ -24,9 +24,9 @@ int main(int argc, char *argv[]){
 		printf("file not found\n");
 		exit(0);
 	}
-
+printf("before while\n");
 	c = fgetc(fp);
-	printf("before while\n");
+	
 	while(c != EOF){
 		
 		//graph 1
