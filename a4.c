@@ -19,8 +19,14 @@ int main(int argc, char *argv[]){
 
 	//open file
 	FILE * fp = fopen(fileName, "r");
+
+	if (fp == NULL){
+		printf("file not found\n");
+		exit(0);
+	}
+
 	c = fgetc(fp);
-	
+	printf("before while\n");
 	while(c != EOF){
 		
 		//graph 1
@@ -61,7 +67,7 @@ int main(int argc, char *argv[]){
 		}
 
 		//print the results of the second graph
-		printf("Degree Sequence for G2: ");
+		printf("\nDegree Sequence for G2: ");
 		for (i=0;i<vertices;i++){
 			printf(" %d",g2[i]);
 		}
