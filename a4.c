@@ -19,7 +19,8 @@ int main(int argc, char *argv[]){
 	int g1[vertices], g2[vertices];
 
 	//open file
-	FILE * fp = fopen(fileName, "r");
+	FILE * fp;
+	fp = fopen(fileName, "r");
 printf("here\n");
 	if (fp == NULL){
 		printf("file not found\n");
