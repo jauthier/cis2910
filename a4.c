@@ -48,7 +48,7 @@ int main(int argc, char *argv[]){
 
 		//graph 2
 		i = 0;
-		for (i=0;i<verticies;i++){
+		for (i=0;i<vertices;i++){
 			
 			char row[vertices*2];
 			fgets(row,vertices*2,fp);
