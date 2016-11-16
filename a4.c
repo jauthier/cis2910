@@ -6,12 +6,13 @@
 
 int main(int argc, char *argv[]){
 
+
 	char *fileName;
 	if (argc == 2)
-		fileName = argv[0];
+		fileName = argv[1];
 	else
 		fileName = "input-graphs.txt";
-
+printf("here\n");
 	int vertices;
 	char c, *temp;
 	//holds the degree of each verticy
@@ -24,9 +25,9 @@ int main(int argc, char *argv[]){
 		printf("file not found\n");
 		exit(0);
 	}
-printf("before while\n");
+
 	c = fgetc(fp);
-	
+	printf("before while\n");	
 	while(c != EOF){
 		
 		//graph 1
