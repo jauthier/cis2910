@@ -12,7 +12,7 @@ int main(int argc, char *argv[]){
 		fileName = argv[1];
 	else
 		fileName = "input-graphs.txt";
-printf("here\n");
+
 	int vertices;
 	char c, *temp;
 	//holds the degree of each verticy
@@ -20,7 +20,7 @@ printf("here\n");
 
 	//open file
 	FILE * fp = fopen(fileName, "r");
-
+printf("here\n");
 	if (fp == NULL){
 		printf("file not found\n");
 		exit(0);
