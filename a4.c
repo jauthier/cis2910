@@ -17,10 +17,10 @@ int main(int argc, char *argv[]){
 	char c, *temp;
 	//holds the degree of each verticy
 	int g1[vertices], g2[vertices];
-
+printf("here\n");
 	//open file
 	FILE * fp;
-printf("here\n");
+
 	fp = fopen(fileName, "r");
 
 	if (fp == NULL){
