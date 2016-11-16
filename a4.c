@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
 		for (i=0;i<verticies;i++){
 			
 			char row[verticies*2];
-			fgets(row,fp);
+			fgets(row,verticies*2,fp);
 
 			char *token = strtok(row," ");
 			while(token != NULL){
@@ -47,11 +47,11 @@ int main(int argc, char *argv[]){
 		vertices = strtol(c,&temp,10);
 
 		//graph 2
-		int i = 0;
+		i = 0;
 		for (i=0;i<verticies;i++){
 			
 			char row[verticies*2];
-			fgets(row,fp);
+			fgets(row,verticies*2,fp);
 
 			char *token = strtok(row," ");
 			while(token != NULL){
@@ -59,7 +59,7 @@ int main(int argc, char *argv[]){
 					g1[i]++;
 			}
 		}
-		
+
 		//print the results of the second graph
 		prinf("Degree Sequence for G2: ");
 		for (i=0;i<verticies;i++){
