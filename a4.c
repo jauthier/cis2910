@@ -58,10 +58,10 @@ int main(int argc, char *argv[]){
 		
 		//get the next character
 		//fgets(c, 2, fp);
-		fgets(c, 2, fp);
+		fgets(c, 5, fp);
 		vertices = strtol(c, &temp, 10);
 		printf("%d\n", vertices);
-		fgets(c, 2, fp);
+		fgets(c, 5, fp);
 		//graph 2
 		
 		i = 0;
