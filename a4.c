@@ -26,6 +26,7 @@ int main(int argc, char *argv[]){
 	}
 
 	c = fgetc(fp);
+	printf("%c\n", c);
 
 	while(c != EOF){
 		vertices = (int)c;
