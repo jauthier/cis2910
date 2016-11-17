@@ -16,7 +16,7 @@ int main(int argc, char *argv[]){
 	}
 printf("here1\n");
 	int vertices;
-	char *c;
+	char c[500];
 	char *temp;
 	FILE * fp;
 	fp = fopen(fileName, "r"); //open file
