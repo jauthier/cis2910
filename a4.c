@@ -80,7 +80,7 @@ printf("%s\n", row);
 			printf(" %d",g2[i]);
 		}
 		//get the next character
-		fgetc(c, 2, fp);
+		fgets(c, 2, fp);
 
 	}
 	
