@@ -16,7 +16,7 @@ int main(int argc, char *argv[]){
 	}
 
 	int vertices;
-	char c;
+	char *c, *temp;
 	FILE * fp;
 	fp = fopen(fileName, "r"); //open file
 
@@ -25,11 +25,10 @@ int main(int argc, char *argv[]){
 		exit(0);
 	}
 
-	c = fgetc(fp);
-	printf("%c\n", c);
+	fgets(c, 2, fp); //get the initial number
 
 	while(c != EOF){
-		vertices = (int)c - '0';
+		vertices = strtol(c, &temp, 10);
 		printf("%d\n", vertices);
 		int g1[vertices];
 		int g2[vertices];
@@ -43,7 +42,7 @@ int main(int argc, char *argv[]){
 			fgets(row,40,fp);
 			if (strcmp(row, "\n") == 0)
 				printf("null\n");
-printf("1 %s\n", row);
+printf("%s\n", row);
 			char *token = strtok(row," ");
 			while(token != NULL){
 				if (strcmp(token,"1") == 0)
