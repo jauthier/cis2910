@@ -57,7 +57,7 @@ printf("%s\n", row);
 		printf("\n");
 		//get the next character
 		fgets(c, 2, fp);
-		vertices = strtol(c, &temp, fp);
+		vertices = strtol(c, 2, fp);
 
 		//graph 2
 		i = 0;
