@@ -40,14 +40,14 @@ int main(int argc, char *argv[]){
 			printf("in first graph\n");
 			char row[vertices*2];
 			fgets(row,40,fp);
-			char *token = strtok(row," ");
+			char *token = strtok(row," \n");
 			while(token != NULL){
 				printf("token: %s\n", token);
 				if (strcmp(token,"1") == 0){
 					g1[i]++;
 					printf("added\n");
 				}
-				token = strtok(NULL," ");
+				token = strtok(NULL," \n");
 			}
 		}
 		//print the results of the first graph
