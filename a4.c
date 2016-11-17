@@ -61,7 +61,7 @@ int main(int argc, char *argv[]){
 		vertices = strtol(c, &temp, 10);
 
 		//graph 2
-		printf("graph 2\n");
+		printf("graph 2: %d\n",i);
 		i = 0;
 		for (i=0;i<vertices;i++){
 			printf("here\n");
