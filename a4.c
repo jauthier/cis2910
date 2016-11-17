@@ -9,17 +9,19 @@ int main(int argc, char *argv[]){
 
 	char *fileName;
 	if (argc == 2){
+		printf("here\n");
 		fileName = argv[1];
+		printf("here2\n");
 	}
 	else {
 		fileName = "input-graphs.txt";
 	}
-
+printf("here3\n");
 	int vertices;
 	char c;
 	//holds the degree of each verticy
 	int g1[vertices], g2[vertices];
-printf("here\n");
+printf("here4\n");
 	//open file
 	FILE * fp;
 
