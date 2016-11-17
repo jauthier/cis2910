@@ -30,6 +30,7 @@ int main(int argc, char *argv[]){
 
 	while(c != EOF){
 		vertices = (int)c;
+		printf("%d\n", vertices);
 		int g1[vertices];
 		int g2[vertices];
 
