@@ -65,6 +65,7 @@ int main(int argc, char *argv[]){
 		
 		i = 0;
 		for (i=0;i<vertices;i++){
+			printf("here\n");
 			char row[vertices*2];
 			fgets(row,40,fp);
 			char *token = strtok(row," \n");
