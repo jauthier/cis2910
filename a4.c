@@ -92,7 +92,7 @@ int main(int argc, char *argv[]){
 				check = 1;
 			i++;
 		}
-		if (check == 1)
+		if (check == 0)
 			printf("The graphs DO have the same degree sequence.\n");
 		else
 			printf("The graphs DO NOT have the same degree sequence.\n");
