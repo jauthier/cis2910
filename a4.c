@@ -9,36 +9,30 @@ int main(int argc, char *argv[]){
 
 	char *fileName;
 	if (argc == 2){
-		printf("here\n");
 		fileName = argv[1];
-		printf("here2\n");
 	}
 	else {
 		fileName = "input-graphs.txt";
 	}
-printf("here3\n");
+
 	int vertices;
 	char c;
-	//holds the degree of each verticy
-	int g1[vertices];
-	int g2[vertices];
-printf("here4\n");
-	//open file
 	FILE * fp;
-
-	fp = fopen(fileName, "r");
+	fp = fopen(fileName, "r"); //open file
 
 	if (fp == NULL){
 		printf("file not found\n");
 		exit(0);
 	}
-
+printf("here\n");
 	c = fgetc(fp);
 	printf("before while\n");	
 	while(c != EOF){
-		
-		//graph 1
 		vertices = (int)c;
+		int g1[vertices];
+		int g2[vertices];
+
+		//graph 1
 		int i = 0;
 		for (i=0;i<vertices;i++){
 			
