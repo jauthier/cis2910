@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
 	printf("%c\n", c);
 
 	while(c != EOF){
-		vertices = (int)c;
+		vertices = (int)c - '0';
 		printf("%d\n", vertices);
 		int g1[vertices];
 		int g2[vertices];
@@ -55,7 +55,7 @@ printf("%s\n", row);
 		}
 		printf("\n");
 		//get the next character
-		c = fgetc(fp);
+		c = fgetc(fp) - '0';
 		vertices = (int)c;
 
 		//graph 2
