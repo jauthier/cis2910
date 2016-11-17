@@ -41,8 +41,7 @@ int main(int argc, char *argv[]){
 			char row[vertices*2];
 			printf("here\n");
 			fgets(row,40,fp);
-printf("%s\n", row);
-char a = getchar();
+printf("1 %s\n", row);
 			char *token = strtok(row," ");
 			while(token != NULL){
 				if (strcmp(token,"1") == 0)
