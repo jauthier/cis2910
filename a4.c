@@ -75,7 +75,7 @@ int main(int argc, char *argv[]){
 				printf("token: %s\n", token);
 				if (strcmp(token,"1") == 0){
 					g2[j]++;
-					printf("added\n");
+					printf("added - j: %d = %d\n",j,g2[j]);
 				}
 				token = strtok(NULL," \n");
 			}
