@@ -89,11 +89,11 @@ int main(int argc, char *argv[]){
 
 		i = 0;
 		int check = 0;
-		while (i < vertices && cheak != 1){
+		while (i < vertices && check != 1){
 			if (g1[i] != g2[i])
 				check = 1;
 		}
-		if (cheak == 1)
+		if (check == 1)
 			printf("The graphs DO have the same degree sequence.\n", );
 		else
 			printf("The graphs DO NOT have the same degree sequence.\n", );
