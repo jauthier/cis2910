@@ -37,6 +37,7 @@ int main(int argc, char *argv[]){
 		//graph 1
 		i = 0;
 		for (i=0;i<vertices;i++){
+			printf("row: %d\n", i);
 			char row[vertices*2];
 			fgets(row,40,fp);
 			char *token = strtok(row," \n");
@@ -60,6 +61,7 @@ int main(int argc, char *argv[]){
 		vertices = strtol(c, &temp, 10);
 
 		//graph 2
+		printf("graph 2\n");
 		i = 0;
 		for (i=0;i<vertices;i++){
 			char row[vertices*2];
