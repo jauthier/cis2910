@@ -16,7 +16,8 @@ int main(int argc, char *argv[]){
 	}
 
 	int vertices;
-	char *c, *temp;
+	char *c;
+	char *temp;
 	FILE * fp;
 	fp = fopen(fileName, "r"); //open file
 
@@ -57,7 +58,7 @@ printf("%s\n", row);
 		printf("\n");
 		//get the next character
 		fgets(c, 2, fp);
-		vertices = strtol(c, 2, fp);
+		vertices = strtol(c, &temp, 10);
 
 		//graph 2
 		i = 0;
