@@ -42,7 +42,7 @@ int main(int argc, char *argv[]){
 			printf("here\n");
 			fgets(row,40,fp);
 printf("%s\n", row);
-char a = getch();
+char a = getchar();
 			char *token = strtok(row," ");
 			while(token != NULL){
 				if (strcmp(token,"1") == 0)
