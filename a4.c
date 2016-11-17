@@ -94,9 +94,9 @@ int main(int argc, char *argv[]){
 				check = 1;
 		}
 		if (check == 1)
-			printf("The graphs DO have the same degree sequence.\n", );
+			printf("The graphs DO have the same degree sequence.\n");
 		else
-			printf("The graphs DO NOT have the same degree sequence.\n", );
+			printf("The graphs DO NOT have the same degree sequence.\n");
 	}
 	
 	return 0;
