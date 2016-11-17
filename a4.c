@@ -23,7 +23,7 @@ int main(int argc, char *argv[]){
 		exit(0);
 	}
 
-	while(fgets(c, 5, fp) != EOF){
+	while(fgets(c, 5, fp) != NULL){
 		vertices = strtol(c, &temp, 10);
 		int g1[vertices];
 		int g2[vertices];
