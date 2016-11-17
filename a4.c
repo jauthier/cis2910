@@ -36,6 +36,7 @@ int main(int argc, char *argv[]){
 			fgets(row,40,fp);
 			char *token = strtok(row," ");
 			while(token != NULL){
+				printf("token: %d\n", token);
 				if (strcmp(token,"1") == 0){
 					g1[i]++;
 					printf("added\n");
