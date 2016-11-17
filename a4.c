@@ -62,10 +62,10 @@ int main(int argc, char *argv[]){
 		printf("%s\n", c);
 		fgets(c, 2, fp);
 		printf("%s\n", c);
-		fgets(c, 2, fp);
+		
 		char b = getchar();
 		vertices = strtol(c, &temp, 10);
-
+		fgets(c, 2, fp);
 		//graph 2
 		
 		int j = 0;
