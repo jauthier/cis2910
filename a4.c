@@ -20,7 +20,8 @@ printf("here3\n");
 	int vertices;
 	char c;
 	//holds the degree of each verticy
-	int g1[vertices], g2[vertices];
+	int g1[vertices];
+	int g2[vertices];
 printf("here4\n");
 	//open file
 	FILE * fp;
