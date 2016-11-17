@@ -27,6 +27,12 @@ int main(int argc, char *argv[]){
 		vertices = strtol(c, &temp, 10);
 		int g1[vertices];
 		int g2[vertices];
+		//initialize arrays
+		i = 0;
+		for (i=0;i<vertices;i++){
+			g1[i] = 0;
+			g2[i] = 0;
+		}
 
 		//graph 1
 		i = 0;
