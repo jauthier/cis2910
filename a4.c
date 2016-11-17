@@ -8,13 +8,15 @@ int main(int argc, char *argv[]){
 
 
 	char *fileName;
-	if (argc == 2)
+	if (argc == 2){
 		fileName = argv[1];
-	else
+	}
+	else {
 		fileName = "input-graphs.txt";
+	}
 
 	int vertices;
-	char c, *temp;
+	char c;
 	//holds the degree of each verticy
 	int g1[vertices], g2[vertices];
 printf("here\n");
