@@ -26,7 +26,7 @@ printf("here2\n");
 		exit(0);
 	}
 printf("here3\n");
-	fgets(c, 2, fp); //get the initial number
+	fgets(c, 5, fp); //get the initial number
 printf("%s",c);
 	while(c != NULL){
 		vertices = strtol(c, &temp, 10);
