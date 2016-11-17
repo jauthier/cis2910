@@ -35,7 +35,7 @@ printf("before first graph\n");
 		//graph 1
 		int i = 0;
 		for (i=0;i<vertices;i++){
-			
+			printf("in first graph\n");
 			char row[vertices*2];
 			fgets(row,vertices*2,fp);
 printf("%s\n", row);
