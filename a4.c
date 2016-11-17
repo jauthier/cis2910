@@ -79,12 +79,12 @@ int main(int argc, char *argv[]){
 
 		//print the results of the second graph
 		i = 0;
-		printf("here\n");
+
 		printf("Degree Sequence for G2: ");
 		for (i=0;i<vertices;i++){
 			printf(" %d",g2[i]);
 		}
-
+		printf("\n");
 		i = 0;
 		int check = 0;
 		while (i < vertices && check != 1){
