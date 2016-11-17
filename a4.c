@@ -43,8 +43,9 @@ printf("%s",c);
 			fgets(row,40,fp);
 			if (strcmp(row, "\n") == 0)
 				printf("null\n");
-printf("%s\n", row);
+			printf("%s\n", row);
 			char *token = strtok(row," ");
+			printf("here\n");
 			while(token != NULL){
 				if (strcmp(token,"1") == 0)
 					g1[i]++;
