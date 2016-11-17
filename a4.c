@@ -24,21 +24,21 @@ int main(int argc, char *argv[]){
 		printf("file not found\n");
 		exit(0);
 	}
-printf("here\n");
+
 	c = fgetc(fp);
 	printf("before while\n");	
 	while(c != EOF){
 		vertices = (int)c;
 		int g1[vertices];
 		int g2[vertices];
-
+printf("before first graph\n");
 		//graph 1
 		int i = 0;
 		for (i=0;i<vertices;i++){
 			
 			char row[vertices*2];
 			fgets(row,vertices*2,fp);
-
+printf("%s\n", row);
 			char *token = strtok(row," ");
 			while(token != NULL){
 				if (strcmp(token,"1") == 0)
@@ -50,6 +50,7 @@ printf("here\n");
 		for (i=0;i<vertices;i++){
 			printf(" %d",g1[i]);
 		}
+		printf("\n");
 		//get the next character
 		c = fgetc(fp);
 		vertices = (int)c;
