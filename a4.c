@@ -62,9 +62,9 @@ int main(int argc, char *argv[]){
 
 		//graph 2
 		
-		i = 0;
-		printf("graph 2: %d\n",i);
-		for (i=0;i<vertices;i++){
+		int j = 0;
+		printf("graph 2\n");
+		for (j=0;j<vertices;j++){
 			printf("here\n");
 			char row[vertices*2];
 			fgets(row,40,fp);
@@ -72,7 +72,7 @@ int main(int argc, char *argv[]){
 			while(token != NULL){
 				printf("token: %s\n", token);
 				if (strcmp(token,"1") == 0){
-					g2[i]++;
+					g2[j]++;
 					printf("added\n");
 				}
 				token = strtok(NULL," \n");
