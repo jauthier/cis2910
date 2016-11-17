@@ -26,17 +26,17 @@ int main(int argc, char *argv[]){
 	}
 
 	c = fgetc(fp);
-	printf("before while\n");	
+
 	while(c != EOF){
 		vertices = (int)c;
 		int g1[vertices];
 		int g2[vertices];
-printf("before first graph\n");
+
 		//graph 1
 		int i = 0;
 		for (i=0;i<vertices;i++){
 			printf("in first graph\n");
-			char * row;
+			char row[];
 			printf("here\n");
 			fgets(row,vertices*2,fp);
 printf("%s\n", row);
