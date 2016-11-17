@@ -58,6 +58,7 @@ int main(int argc, char *argv[]){
 		printf("\n");
 		//get the next character
 		fgets(c, 2, fp);
+		fgets(c, 2, fp);
 		vertices = strtol(c, &temp, 10);
 
 		//graph 2
