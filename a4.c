@@ -40,7 +40,7 @@ int main(int argc, char *argv[]){
 			printf("in first graph\n");
 			char row[vertices*2];
 			printf("here\n");
-			fgets(row,40,fp);
+			fgets(row,40,(FILE *)fp);
 printf("%s\n", row);
 			char *token = strtok(row," ");
 			while(token != NULL){
