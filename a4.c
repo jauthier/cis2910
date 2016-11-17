@@ -36,7 +36,7 @@ int main(int argc, char *argv[]){
 		int i = 0;
 		for (i=0;i<vertices;i++){
 			printf("in first graph\n");
-			char row[];
+			char row[vertices*2];
 			printf("here\n");
 			fgets(row,vertices*2,fp);
 printf("%s\n", row);
