@@ -60,7 +60,7 @@ int main(int argc, char *argv[]){
 		fgets(c, 2, fp);
 		fgets(c, 2, fp);
 		vertices = strtol(c, &temp, 10);
-		//fgets(c, 2, fp);
+		fgets(c, 2, fp);
 		//graph 2
 		
 		i = 0;
