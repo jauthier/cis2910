@@ -63,7 +63,7 @@ int main(int argc, char *argv[]){
 		//graph 2
 		
 		int j = 0;
-		printf("graph 2\n");
+		printf("graph 2: %d\n",vertices);
 		for (j=0;j<vertices;j++){
 			printf("here\n");
 			char row[vertices*2];
