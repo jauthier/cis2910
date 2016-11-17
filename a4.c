@@ -14,18 +14,18 @@ int main(int argc, char *argv[]){
 	else {
 		fileName = "input-graphs.txt";
 	}
-
+printf("here1\n");
 	int vertices;
 	char *c;
 	char *temp;
 	FILE * fp;
 	fp = fopen(fileName, "r"); //open file
-
+printf("here2\n");
 	if (fp == NULL){
 		printf("file not found\n");
 		exit(0);
 	}
-
+printf("here3\n");
 	fgets(c, 2, fp); //get the initial number
 printf("%s",c);
 	while(c != NULL){
