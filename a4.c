@@ -90,6 +90,7 @@ int main(int argc, char *argv[]){
 		while (i < vertices && check != 1){
 			if (g1[i] != g2[i])
 				check = 1;
+			i++;
 		}
 		if (check == 1)
 			printf("The graphs DO have the same degree sequence.\n");
