@@ -75,10 +75,11 @@ int main(int argc, char *argv[]){
 				token = strtok(NULL," \n");
 			}
 		}
-			printf("here\n");
+			
 
 		//print the results of the second graph
 		i = 0;
+		printf("here\n");
 		printf("Degree Sequence for G2: ");
 		for (i=0;i<vertices;i++){
 			printf(" %d",g2[i]);
