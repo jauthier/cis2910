@@ -45,10 +45,11 @@ printf("%s",c);
 				printf("null\n");
 			printf("%s\n", row);
 			char *token = strtok(row," ");
-			printf("here\n");
+			printf("%s\n",token);
 			while(token != NULL){
 				if (strcmp(token,"1") == 0)
 					g1[i]++;
+				token = strtok(NULL," ");
 			}
 		}
 		//print the results of the first graph
