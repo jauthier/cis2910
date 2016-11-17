@@ -63,19 +63,21 @@ int main(int argc, char *argv[]){
 		//graph 2
 		i = 0;
 		for (i=0;i<vertices;i++){
-			
 			char row[vertices*2];
-			fgets(row,vertices*2,fp);
-
-			char *token = strtok(row," ");
+			fgets(row,40,fp);
+			char *token = strtok(row," \n");
 			while(token != NULL){
-				if (strcmp(token,"1") == 0)
-					g1[i]++;
+				printf("token: %s\n", token);
+				if (strcmp(token,"1") == 0){
+					g2[i]++;
+					printf("added\n");
+				}
+				token = strtok(NULL," \n");
 			}
 		}
 
 		//print the results of the second graph
-		printf("\nDegree Sequence for G2: ");
+		printf("Degree Sequence for G2: ");
 		for (i=0;i<vertices;i++){
 			printf(" %d",g2[i]);
 		}
