@@ -57,7 +57,7 @@ int main(int argc, char *argv[]){
 		printf("\n");
 		
 		//get the next character
-		fgets(c, 2, fp);
+		//fgets(c, 2, fp);
 		fgets(c, 2, fp);
 		vertices = strtol(c, &temp, 10);
 		fgets(c, 2, fp);
@@ -97,7 +97,7 @@ int main(int argc, char *argv[]){
 		else
 			printf("The graphs DO NOT have the same degree sequence.\n");
 
-		fgets(c, 2, fp);
+		//fgets(c, 2, fp);
 	}
 	
 	return 0;
