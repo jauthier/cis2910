@@ -56,6 +56,7 @@ int main(int argc, char *argv[]){
 			printf(" %d",g1[i]);
 		}
 		printf("\n");
+		char b = getchar();
 		//get the next character
 		fgets(c, 2, fp);
 		fgets(c, 2, fp);
@@ -86,6 +87,7 @@ int main(int argc, char *argv[]){
 		for (i=0;i<vertices;i++){
 			printf(" %d",g2[i]);
 		}
+		b = getchar();
 		fgets(c, 2, fp);
 	}
 	
