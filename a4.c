@@ -86,6 +86,7 @@ int main(int argc, char *argv[]){
 		for (i=0;i<vertices;i++){
 			printf(" %d",g2[i]);
 		}
+		fgets(c, 2, fp);
 	}
 	
 	return 0;
