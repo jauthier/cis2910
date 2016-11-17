@@ -27,7 +27,7 @@ int main(int argc, char *argv[]){
 	}
 
 	fgets(c, 2, fp); //get the initial number
-
+printf("%s",c);
 	while(c != NULL){
 		vertices = strtol(c, &temp, 10);
 		printf("%d\n", vertices);
