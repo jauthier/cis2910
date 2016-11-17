@@ -27,7 +27,7 @@ int main(int argc, char *argv[]){
 
 	fgets(c, 2, fp); //get the initial number
 
-	while(c != EOF){
+	while(c != NULL){
 		vertices = strtol(c, &temp, 10);
 		printf("%d\n", vertices);
 		int g1[vertices];
@@ -56,8 +56,8 @@ printf("%s\n", row);
 		}
 		printf("\n");
 		//get the next character
-		c = fgetc(fp) - '0';
-		vertices = (int)c;
+		fgets(c, 2, fp);
+		vertices = strtol(c, &temp, fp);
 
 		//graph 2
 		i = 0;
@@ -79,7 +79,7 @@ printf("%s\n", row);
 			printf(" %d",g2[i]);
 		}
 		//get the next character
-		c = fgetc(fp);
+		fgetc(c, 2, fp);
 
 	}
 	
