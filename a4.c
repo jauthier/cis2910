@@ -56,10 +56,13 @@ int main(int argc, char *argv[]){
 			printf(" %d",g1[i]);
 		}
 		printf("\n");
-		char b = getchar();
+		
 		//get the next character
 		fgets(c, 2, fp);
+		printf("%s\n", c);
 		fgets(c, 2, fp);
+		printf("%s\n", c);
+		char b = getchar();
 		vertices = strtol(c, &temp, 10);
 
 		//graph 2
