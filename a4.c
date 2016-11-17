@@ -37,6 +37,7 @@ printf("before first graph\n");
 		for (i=0;i<vertices;i++){
 			printf("in first graph\n");
 			char * row;
+			printf("here\n");
 			fgets(row,vertices*2,fp);
 printf("%s\n", row);
 			char *token = strtok(row," ");
