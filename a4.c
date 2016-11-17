@@ -37,7 +37,6 @@ int main(int argc, char *argv[]){
 		//graph 1
 		i = 0;
 		for (i=0;i<vertices;i++){
-			printf("in first graph\n");
 			char row[vertices*2];
 			fgets(row,40,fp);
 			char *token = strtok(row," \n");
@@ -77,6 +76,7 @@ int main(int argc, char *argv[]){
 		}
 
 		//print the results of the second graph
+		i = 0;
 		printf("Degree Sequence for G2: ");
 		for (i=0;i<vertices;i++){
 			printf(" %d",g2[i]);
