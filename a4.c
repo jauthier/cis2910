@@ -70,6 +70,7 @@ int main(int argc, char *argv[]){
 			printf("here\n");
 			char row[vertices*2];
 			fgets(row,40,fp);
+			printf("%s\n", row);
 			char *token = strtok(row," \n");
 			while(token != NULL){
 				printf("token: %s\n", token);
