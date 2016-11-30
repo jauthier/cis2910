@@ -92,8 +92,8 @@ int checkEulerian(int * g, int vertices){
     int checkC = 1;
     for (i=0;i<vertices;i++){
         if (g[i] == 0){
-            checkC == 0;
-            continue;
+            checkC = 0;
+            break;
         }
     }
 
@@ -104,8 +104,8 @@ int checkEulerian(int * g, int vertices){
         printf("%d, %d\n", g[i], g[i]%2);
         if (g[i]%2 != 0){ // if the degree is odd
             printf("here\n");
-            checkD == 0;
-            continue;
+            checkD = 0;
+            break;
         }
     }
     printf("%d\n", checkD);
