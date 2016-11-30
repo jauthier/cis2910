@@ -43,7 +43,7 @@ int main(int argc, char * argv[]){
         int edges = numEdges(degreeCount,vertices);
         int largest = largestDegree(degreeCount,vertices);
         int eularian = checkEulerian(degreeCount,vertices);
-        printf("Number of Edges: %d, largest degree: %d, eularian: %d",edges,largest,eularian);
+        printf("Number of Edges: %d, largest degree: %d, eularian: %d\n",edges,largest,eularian);
     }
 
     return 0;
