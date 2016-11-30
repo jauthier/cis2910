@@ -86,7 +86,6 @@ int largestDegree(int * g, int vertices){
 }
 
 int checkEulerian(int * g, int vertices){
-    printf("vert: %d\n", vertices);
     // check if the graph is connected
     int i = 0;
     int checkC = 1;
@@ -101,14 +100,11 @@ int checkEulerian(int * g, int vertices){
     i = 0;
     int checkD = 1;
     for (i=0;i<vertices;i++){
-        printf("%d, %d\n", g[i], g[i]%2);
         if (g[i]%2 != 0){ // if the degree is odd
-            printf("here\n");
             checkD = 0;
             break;
         }
     }
-    printf("%d\n", checkD);
     if (checkD == 1 && checkC == 1)
         return 1;
     else
