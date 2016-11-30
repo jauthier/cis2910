@@ -36,6 +36,7 @@ int main(int argc, char * argv[]){
         for (i=0;i<vertices;i++){ // go through the graph line by line
             char line[(vertices*2)+1];
             fgets(line, (vertices*2)+1, fp);
+            printf("%s\n", line);
             degreeCount[i] = readLine(line);
         }
 
@@ -44,6 +45,7 @@ int main(int argc, char * argv[]){
         int largest = largestDegree(degreeCount,vertices);
         int eularian = checkEulerian(degreeCount,vertices);
         printf("Number of Edges: %d, largest degree: %d, eularian: %d\n",edges,largest,eularian);
+        char c = getchar();
     }
 
     return 0;
