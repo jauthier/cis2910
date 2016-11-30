@@ -41,7 +41,7 @@ int main(int argc, char * argv[]){
             if (strcmp(line, "\n") == 0)
                 fgets(line, (vertices*2)+1, fp);
             printf("line %d: %s\n", i, line);
-            char b = getchar();
+            //char b = getchar();
             degreeCount[i] = readLine(line);
         }
 
