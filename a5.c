@@ -35,9 +35,9 @@ int main(int argc, char * argv[]){
             char line[(vertices*2)+1];
             
             fgets(line, (vertices*2)+1, fp);
-            printf("%s\n",line);
+            printf("%s",line);
             degreeCount[i] = readLine(line);
-
+            printf("degree: %d\n",degreeCount[i])
         }
     }
 
