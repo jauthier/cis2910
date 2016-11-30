@@ -38,6 +38,8 @@ int main(int argc, char * argv[]){
         for (i=0;i<vertices;i++){ // go through the graph line by line
             char line[(vertices*2)+1];
             fgets(line, (vertices*2)+1, fp);
+            if (strcmp(line, "\n") == 0)
+                fgets(line, (vertices*2)+1, fp);
             printf("line %d: %s\n", i, line);
             char b = getchar();
             degreeCount[i] = readLine(line);
