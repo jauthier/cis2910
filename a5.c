@@ -26,15 +26,15 @@ int main(int argc, char * argv[]){
         printf("v: %s\n",v);
         vertices = strtol(v, &temp, 10); // convert the string to an int
         int degreeCount[vertices]; // define an array to hold the degree count for each vetex
-
+        i = 0;
         for (i=0;i<vertices;i++){ // initalize the array
             degreeCount[i] = 0;
         }
-
+        i = 0;
         for (i=0;i<vertices;i++){ // go through the graph line by line
-            char line[vertices*2];
+            char line[(vertices*2)+1];
             
-            fgets(line, vertices*2, fp);
+            fgets(line, (vertices*2)+1, fp);
             printf("%s\n",line);
             degreeCount[i] = readLine(line);
 
