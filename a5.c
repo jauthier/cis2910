@@ -26,7 +26,8 @@ int main(int argc, char * argv[]){
         exit(0);
     }
     while(fgets(v, 6, fp) != NULL){ //get the number of verticies
-
+        if (strcmp(v, "\n") == 0)
+            fgets(v, 6, fp);
         vertices = strtol(v, &temp, 10); // convert the string to an int
         printf("%s, %d\n",v, vertices);
         int degreeCount[vertices]; // define an array to hold the degree count for each vetex
