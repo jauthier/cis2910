@@ -3,6 +3,9 @@
 #include <stdlib.h>
 
 int readLine(char * line);
+int numEdges(int * g, int vertices);
+int largestDegree(int * g, int vertices);
+int checkEulerian(int * g, int vertices);
 
 int main(int argc, char * argv[]){
 
@@ -23,7 +26,6 @@ int main(int argc, char * argv[]){
         exit(0);
     }
     while(fgets(v, 6, fp) != NULL){ //get the number of verticies
-        printf("v: %s\n",v);
         vertices = strtol(v, &temp, 10); // convert the string to an int
         int degreeCount[vertices]; // define an array to hold the degree count for each vetex
         i = 0;
@@ -33,12 +35,15 @@ int main(int argc, char * argv[]){
         i = 0;
         for (i=0;i<vertices;i++){ // go through the graph line by line
             char line[(vertices*2)+1];
-            
             fgets(line, (vertices*2)+1, fp);
-            printf("%s",line);
             degreeCount[i] = readLine(line);
-            printf("degree: %d\n",degreeCount[i]);
         }
+
+        // after all of the lines of the graph have been read
+        int edges = numEdges(degreeCount,vertices);
+        int largest = largestDegree(degreeCount,vertices);
+        int eularian = checkEulerian(degreeCount,vertices);
+        printf("Number of Edges: %d, largest degree: %d, eularian: %d",edges,largest,eularian);
     }
 
     return 0;
@@ -56,4 +61,52 @@ int readLine(char * line){
     }
 
     return count;
+}
+
+int numEdges(int * g, int vertices){
+    int sum = 0;
+    int i = 0;
+
+    // count all the edges
+    for (i=0;i<vertices;i++){
+        sum = sum + g[i];
+    }
+    return sum/2;
+}
+
+int largestDegree(int * g, int vertices){
+    int largest = 0;
+    int i = 0;
+
+    for (i=0;i<vertices;i++){
+        if (g[i] > largest)
+            largest = g[i];
+    }
+    return largest;
+}
+
+int checkEulerian(int * g, int vertices){
+    // check if the graph is connected
+    int i = 0;
+    int checkC = 1;
+    for (i=0;i<vertices;i++){
+        if (g[i] == 0){
+            checkC == 0;
+            break;
+        }
+    }
+
+    //check if all vertices have  even degree
+    i = 0;
+    int checkD = 1;
+    for (i=0;i<vertices;i++){
+        if (g[i]%2 == 0){
+            checkD == 0;
+            break;
+        }
+    }
+    if (checkD == 1 && checkC == 1)
+        return 1;
+    else
+        return 0;
 }
